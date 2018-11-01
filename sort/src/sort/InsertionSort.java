@@ -4,6 +4,7 @@ package sort;
  * 时间复杂度n^2
  * 空间复杂度O(1)
  */
+//二次提交测试
 public class InsertionSort {
 	public static void main(String[] args) {
 		int[] array = {37, 40, 38, 42, 461, 5, 7, 9, 12};
