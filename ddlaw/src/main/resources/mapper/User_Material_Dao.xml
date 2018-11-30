@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dangde.dao.third.User_Material_Dao">
+
+
+    <insert id="insertUser_Material">
+		insert ignore into user_material(user_id,material_id)
+			values	
+			<foreach collection="user_ids" item="user_id" separator=",">	
+				(#{user_id},#{material_id})
+			</foreach>
+	</insert>
+	
+</mapper>

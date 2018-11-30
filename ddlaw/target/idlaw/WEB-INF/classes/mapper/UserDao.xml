@@ -1,0 +1,127 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sd.hqw.dao.UserDao">
+    <!--目的:为dao接口方法提供sql语句配置
+    即针对dao接口中的方法编写我们的sql语句-->
+
+
+     <insert id="insertUser" parameterType="User">
+         insert into user(username,password,email,regTime)
+        	values (#{username},#{password},#{email},#{regTime})
+               
+     </insert>
+     
+     <update id="updateUser" parameterType="User">
+        UPDATE user
+        SET sex = #{sex},birthday= #{birthday},alipay= #{alipay},telephone= #{telephone}
+        WHERE id=#{id}
+     </update>
+     <update id="addmoney">
+        UPDATE user
+        SET money=money+#{amount}
+        WHERE id=#{useridto}
+     </update>
+     <update id="submoney">
+        UPDATE user
+        SET money=money-#{amount}
+        WHERE id=#{useridfrom}
+     </update>
+     
+    
+     
+     <select id="getmaxkey" resultType="Long">
+        select max(id) from user
+     </select>
+     <select id="getUserById" resultType="User">
+        select 
+	        u.username,
+			u.sex,
+			u.birthday 
+       		from user u where id = #{userid}  
+     </select>   
+     
+     
+     
+<!-- getUserByName-->
+      
+      <resultMap type="User" id="resultUser1">
+      	<id property="id" column="id" />
+        <result property="username" column="username" /> 
+        <result property="sex" column="sex" /> 
+        <result property="birthday" column="birthday" />       
+		<collection property="roles"  ofType="Role">
+			<result property="id" column="rid" />
+            <result property="name" column="rname" />  		
+		</collection>
+	  </resultMap>
+	 
+     <select id="getUserByName" resultMap="resultUser1">
+     
+	     select 
+	            u.id, u.username, u.sex, u.birthday, 
+	            r.id as rid, r.name as rname
+	        from 
+	            user u 
+	        inner join  
+	            user_role ur
+	        on
+	            u.id=ur.user_id
+	        inner join
+	            role r
+	        on
+	            r.id=ur.role_id
+	            
+             where username = #{username}       
+     </select>
+     
+<!-- getUserByName_pwd-->   
+  
+      <resultMap type="User" id="resultUser2">
+        <id property="id" column="id" />
+        <result property="username" column="username" /> 
+        <result property="sex" column="sex" /> 
+        <result property="email" column="email" /> 
+        <result property="alipay" column="alipay" /> 
+        <result property="telephone" column="telephone" />                  
+        <result property="regTime" column="regTime" /> 
+        <result property="money" column="money" />         
+        <result property="birthday" column="birthday" /> 
+		<collection property="roles"  ofType="Role">
+			<id property="id" column="rid" />
+            <result property="name" column="rname" />  		
+		</collection>
+	  </resultMap>
+	 
+     <select id="getUserByName_pwd" resultMap="resultUser2">
+     
+	     select 
+	            u.*,
+	            r.id as rid, r.name as rname 
+	        from 
+	            user u 
+	        inner join  
+	            user_role ur
+	        on
+	            u.id=ur.user_id
+	        inner join
+	            role r
+	        on
+	            r.id=ur.role_id
+	            
+             where username = #{username} and password = #{password}         
+     </select>
+     
+     
+
+     <select id="getUserByAnswerId" resultType="User">
+               SELECT
+		u.username,
+		u.id
+        FROM user u
+        INNER JOIN answer a ON u.id=a.userId
+        WHERE a.id=#{answerid}    
+     </select>
+         
+     
+</mapper>

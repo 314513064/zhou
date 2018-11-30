@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>当得法律</title>
+    <link rel="stylesheet" href="/ddlaw/lib/css/bootstrap.min.css"/>
+    <link rel="stylesheet/less" href="/ddlaw/css/index.less"/>
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <a href="/ddlaw/index.html"><span class="glyphicon glyphicon-chevron-left"></span> 取消</a>
+    </div>
+    <div class="registerContent">
+        <h3>手机注册</h3>
+        <div class="items">
+            <div class="tel">
+                <div class="country">
+                    <span>中国&nbsp;+86</span>
+                </div>
+                <input type="tel" class="form-control" placeholder="请输入11位手机号码"/>
+            </div>
+            <div class="password">
+                <div class="country">
+                    <span>密码</span>
+                </div>
+                <input type="password" class="form-control" placeholder="6-11位英文数字混合"/>
+            </div>
+            <div class="rePassword">
+                <div class="country">
+                    <span>确认密码</span>
+                </div>
+                <input type="password" class="form-control" placeholder="请确认密码"/>
+            </div>
+            <div class="code">
+                <div class="country">
+                    <span>验证码</span>
+                </div>
+                <button class="btn btn-info btn-sm">获取验证码</button>
+                <input type="text" class="form-control"/>
+            </div>
+        </div>
+        <button class="btn btn-info go">注册</button>
+
+    </div>
+    <div class="error"></div>
+</div>
+</body>
+</html>
+<script src="/ddlaw/lib/js/less.js"></script>
+<script src="/ddlaw/lib/js/jquery.min.js"></script>
+<script src="/ddlaw/lib/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        var color = $(".tel input").css('borderColor');
+
+        $(".password input").focus(function () {
+            var telNum = $(".tel input").val();
+//            console.log(telNum);//打印一下手机号
+            $(".tel input").css('borderColor',color);
+            //手机号正则表达式
+            if(!(/^[1][3,4,5,7,8][0-9]{9}$/.test(telNum))){
+                $(".error").fadeIn(500).delay(2000).fadeOut(500).text('请输入正确的手机号！'); //显示错误信息
+                $(".tel input").focus()//重新聚焦错误地点
+                return false;//中断操作
+            }
+        });
+        $(".rePassword input").focus(function () {
+            var password = $(".password input").val();
+            console.log(password);
+            if(!(/^(?=.*\d)(?=.*[a-z]).{6,15}$/.test(password))
+            ){
+                $(".error").fadeIn(500).delay(2000).fadeOut(500).text('密码格式不正确！'); //显示错误信息
+                $(".password input").focus();//重新聚焦错误地点
+                return false;//中断操作
+            }
+        });
+        $(".go").click(function () {
+            var tel = $(".tel input").val();
+            var password = $(".password input").val();
+            var rePassword = $(".rePassword input").val();
+            if(tel.length==0||password.length==0||rePassword.length==0){
+                $(".error").fadeIn(500).delay(2000).fadeOut(500).text('所填内容不能为空！');
+                return false;
+            }
+            else if(password!=rePassword){
+                $(".error").fadeIn(500).delay(2000).fadeOut(500).text('两次输入的密码不一致！'); //显示错误信息
+                $(".password input").val('');
+                $(".rePassword input").val('');
+                $(".password input").focus();//重新聚焦错误地点
+
+                return false;//中断操作
+            }
+            else{
+                $.ajax({
+                    url:'/ddlaw/register',
+                    method:'post',
+                    data:{
+                        "tel":tel,
+                        "password":password
+                    },
+                    contentType: "application/x-www-form-urlencoded",
+                    success: function (data) {
+                        if(data.code==1000){
+                            $(".error").fadeIn(500).delay(2000).fadeOut(500).text('注册成功');
+                            setTimeout(function(){
+                            	window.location.href="logins.html";//跳转的地址
+                            },2500)
+                            
+                        }
+                        else if(data.code==1001){
+                            $(".error").fadeIn(500).delay(2000).fadeOut(500).text('注册失败，请重试');
+                            $(".tel input").val('');
+                            $(".password input").val('');
+                            $(".rePassword input").val('');
+                            return false;
+                        }
+                        else if(data.code==1002){
+                            $(".error").fadeIn(500).delay(2000).fadeOut(500).text('用户名已存在');
+                            $(".tel input").val('');
+                            $(".password input").val('');
+                            $(".rePassword input").val('');
+                            return false;
+                        }
+                        else{}
+                    }
+                })
+            }
+
+
+
+        })
+
+    })
+</script>

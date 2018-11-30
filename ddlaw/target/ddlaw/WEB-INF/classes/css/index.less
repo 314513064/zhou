@@ -1,0 +1,1963 @@
+@import "adapter.less"; //引入适配样式
+@import "base.less"; // 引入初试样式
+
+.wrap{
+  //首页开始
+  position: relative;
+    .logo{
+      text-align: center;
+      margin-top: 120/36rem;
+      img{
+        height: 320/36rem;
+        margin: 0 auto;
+      }
+      span{
+        margin-top: 30/36rem;
+        display: block;
+        font-size: 32/36rem;
+        font-weight: bolder;
+      }
+    }
+    #login{
+      margin-top: 110/36rem;
+      display: flex;
+      height: 300/36rem;
+      a{
+        color: #669999;
+        flex: 1;
+        height: 300/36rem;
+        border-right: 2/36rem solid #bbbbbb;
+        text-align: center;
+        font-size: 28/36rem;
+        &:last-child{
+          border: 0;
+        }
+        span{
+          font-size: 38*2/36rem;
+          display: block;
+          text-align: center;
+          margin-top: 94/36rem;
+          margin-bottom: 40/36rem;
+        }
+      }
+    }
+    #register{
+      height: 39/18rem;
+      line-height:39/18rem;
+      a{
+        text-align: center;
+        font-size: 16/18rem;
+        color: #699;
+      }
+    }
+  //首页结束
+  //注册页开始
+    .header{
+      height: 40/18rem;
+      line-height: 40/18rem;
+      padding: 0 38/36rem;
+      vertical-align: middle;
+      a{
+        font-size: 14/18rem;
+        color: #699;
+        line-height: 40/18rem;
+        font-weight: bolder;
+        span{
+          font-weight: normal;
+        }
+      }
+    }
+    .registerContent{
+      margin-top: 164/36rem;
+      h3{
+        width: 199/36rem;
+        margin: 0 auto;
+        font-size: 14/18rem;
+        padding: 26/36rem;
+        color: #699;
+        text-align: center;
+        border-bottom: 4/36rem solid #699;
+      }
+      .items{
+        margin-top: 38/36rem;
+        color:#000000;
+        font-size: 16/18rem;
+          &>div{
+            height: 80/36rem;
+            line-height:80/36rem; ;
+//            border-bottom: 2/36rem solid #bbbbbb;
+            padding: 6/36rem 26/36rem;
+          }
+          .tel{
+              .country{
+                width: 110/18rem;
+                border-right: 1px solid #bbbbbb;
+                height: 32/18rem;line-height: 32/18rem;
+                text-align: right;
+                padding-right: 24/36rem;
+                color: #699;
+                font-size: 16/18rem;
+                float: left;
+              }
+            input{
+              width: 219/18rem;
+              height: 31/18rem;
+              float: right;
+            }
+          }
+        .password{
+          .country{
+            width: 110/18rem;
+            height: 32/18rem;line-height: 32/18rem;
+            text-align: right;
+            padding-right: 24/36rem;
+            font-size: 16/18rem;
+            float: left;
+          }
+          input{
+            width: 219/18rem;
+            height: 31/18rem;
+            float: right;
+          }
+        }
+        .rePassword{
+          .country{
+            width: 110/18rem;
+            height: 32/18rem;line-height: 32/18rem;
+            text-align: right;
+            padding-right: 24/36rem;
+            font-size: 16/18rem;
+            float: left;
+          }
+          input{
+            width: 219/18rem;
+            height: 31/18rem;
+            float: right;
+          }
+        }
+        .code{
+          .country{
+            width: 110/18rem;
+            height: 32/18rem;line-height: 32/18rem;
+            text-align: right;
+            padding-right: 24/36rem;
+            font-size: 16/18rem;
+            float: left;
+          }
+          input{
+            width: 120/18rem;
+            height: 31/18rem;
+            float: right;
+            margin-right: 11/18rem
+          }
+          button{
+            width: 88/18rem;
+            float: right;
+            font-size: 13/18rem;
+
+          }
+        }
+      }
+      .go{
+        display: block;
+        width: 329/18rem;
+        margin: 40/36rem auto;
+        font-size: 16/18rem;
+        a{
+          color: #ffffff;
+        }
+      }
+
+    }
+    .error{
+    position: fixed;
+    top: 10rem;
+    left: 4.45rem;
+    width: 200/18rem;
+    height: 40/18rem;
+    line-height: 40/18rem;
+    margin: 60/18rem auto;
+    text-align: center;
+    background-color: rgba(0,0,0,.5);
+    color: #ffffff;
+    display: none;
+    border-radius: 5/18rem;
+  }
+  //注册页结束
+
+  //登陆页开始
+    .loginContent{
+          margin-top: 240/36rem;
+          h3{
+            font-size: 20/18rem;
+            text-align: center;
+          }
+          .items{
+            margin-top: 21/18rem;
+            padding: 0 10/18rem;
+            .country{
+              margin-top: 30/36rem;
+              height: 30/18rem;
+              span{
+                display: block;
+                float: left;
+                width: 110/18rem;
+                height: 30/18rem;
+                font-size: 14/18rem;
+                text-align: center;
+                line-height: 30/18rem;
+                background-color: #fff;
+                color: #000000;
+                border: 1px solid #bbbbbb;
+              }
+              select{
+                width: 226/18rem;
+                float: right;
+                height: 30/18rem;
+                line-height: 15/18rem;
+                border-radius: 8/18rem;
+                font-size: 12/18rem;
+                color: #000000;
+              }
+            }
+            .telLogin{
+              margin-top: 30/36rem;
+              height: 30/18rem;
+              span{
+                display: block;
+                float: left;
+                width: 110/18rem;
+                height: 30/18rem;
+                font-size: 14/18rem;
+                text-align: center;
+                line-height: 30/18rem;
+                background-color: #fff;
+                color: #000000;
+                border: 1px solid #bbbbbb;
+              }
+              input{
+                width: 226/18rem;
+                float: right;
+                height: 30/18rem;
+                line-height: 30/18rem;
+              }
+            }
+            .pass{
+              margin-top: 30/36rem;
+              height: 30/18rem;
+              span{
+                display: block;
+                float: left;
+                width: 110/18rem;
+                height: 30/18rem;
+                font-size: 14/18rem;
+                text-align: center;
+                line-height: 30/18rem;
+                background-color: #fff;
+                color: #000000;
+                border: 1px solid #bbbbbb;
+              }
+              input{
+                width: 226/18rem;
+                float: right;
+                height: 30/18rem;
+                line-height: 30/18rem;
+              }
+            }
+
+          }
+        button{
+          display: block;
+          width: 329/18rem;
+          margin: 40/36rem auto;
+          font-size: 16/18rem;
+        }
+    }
+  //登陆页结束
+  //底部导航栏开始
+  .nav{
+    z-index: 999;
+    height: 50/18rem;
+    width: 20rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #699;
+    display: flex;
+    div{
+      flex: 1;
+      text-align: center;
+      height: 60/18rem;
+      a{
+        height: 60/18rem;
+        color:#ffffff;
+        font-size: 14/18rem;
+        line-height: 18/18rem;
+        padding: 6/18rem 10/18rem;
+
+        span{
+          font-size: 25/18rem;
+          display: block;
+        }
+        .plus{
+          line-height: 32/18rem;
+        }
+
+      }
+    }
+  }
+  //底部导航栏结束
+  //我的信息页面开始
+  .myHeader{
+    height: 41/18rem;
+    background: -webkit-linear-gradient(top, #6a6a6a 0%, #b7b7b7 100%);
+    h3{
+      line-height: 41/18rem;
+      font-size: 20/18rem;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+  .myItem{
+    padding: 0 10/18rem;
+    .myInfo{
+      height: 80/18rem;
+      border-bottom: 1px solid #bbbbbb;
+      padding: 15/18rem 0 ;
+      font-weight: bolder;
+      img{
+        float: left;
+        margin-left: 45/18rem;
+        width: 50/18rem;
+      }
+      span{
+        display: block;
+        text-align: center;
+        line-height: 50/18rem;
+        font-size: 16/18rem;
+        a{
+          color: #000000;
+        }
+      }
+    }
+    .myFriend{
+      height: 45/18rem;
+      border-bottom: 1px solid #bbbbbb;
+      padding:  0 1rem;
+      line-height: 45/18rem;
+      font-weight: bold;
+      span:first-child{
+        font-size: 20/18rem;
+        color: blue;
+      }
+      span:last-child{
+        float: right;
+        margin-top: 14/18rem;
+        color: #bbbbbb;
+      }
+    }
+    .myCheck{
+      height: 45/18rem;
+      border-bottom: 1px solid #bbbbbb;
+      padding:  0 1rem;
+      line-height: 45/18rem;
+      font-weight: bold;
+      span:first-child{
+        font-size: 20/18rem;
+        color: green;
+      }
+      span:last-child{
+        float: right;
+        margin-top: 14/18rem;
+        color: #bbbbbb;
+      }
+    }
+    .news{
+      height: 45/18rem;
+      border-bottom: 1px solid #bbbbbb;
+      padding:  0 1rem;
+      line-height: 45/18rem;
+      font-weight: bold;
+      span:first-child{
+        font-size: 20/18rem;
+        color: red;
+      }
+      span:last-child{
+        float: right;
+        margin-top: 14/18rem;
+        color: #bbbbbb;
+      }
+    }
+  }
+  //我的信息页结束
+  //我的设置开始
+  .setHeader{
+    height: 40/18rem;
+    line-height: 40/18rem;
+    padding: 0 38/36rem;
+    vertical-align: middle;
+    background: -webkit-linear-gradient(top, #e7e7e7 0%,#ffffff 100%);
+    border-bottom: 1px solid #bbbbbb;
+    a{
+      float: left;
+      height: 40/18rem;
+      font-size: 14/18rem;
+      color: #699;
+      line-height: 40/18rem;
+      font-weight: bolder;
+      span{
+        font-weight: normal;
+      }
+    }
+    h3{
+      float: left;
+      text-align: center;
+      font-size: 18/18rem;
+      width: 240/18rem;
+      margin-top: 13/18rem;
+      color: #000000;
+      font-weight: bolder;
+    }
+    strong{
+      font-size: 14/18rem;
+      line-height: 50/18rem;
+    }
+  }
+  .setItem{
+    padding: 0 10/18rem;
+    background-color: #fff;
+      div{
+        box-sizing: border-box;
+        height: 44/18rem;
+        border-bottom: 1px solid #bbbbbb;
+        padding: 14.5/18rem 30/18rem;
+        font-size: 15/18rem;
+
+        a{
+          height: 40/18rem;
+          color: #000000;
+          span:first-child{
+            float: left;
+          }
+          span:last-child{
+            float: right;
+            color: #bbbbbb;
+          }
+        }
+      }
+    button{
+      display: block;
+      width: 18rem;
+      margin-left: 1rem;
+//      margin: 0 auto;
+      font-size: 16/18rem;
+      position: fixed;
+      bottom:2/18rem;
+      left: 0;
+      a{
+        color: #ffffff;
+      }
+    }
+  }
+  //我的设置结束
+  //设置具体信息开始
+  .setInfoHeader{
+    height: 40/18rem;
+    line-height: 40/18rem;
+    padding: 0 38/36rem;
+    vertical-align: middle;
+    a{
+      float: left;
+      height: 40/18rem;
+      font-size: 14/18rem;
+      color: #699;
+      line-height: 40/18rem;
+      font-weight: bolder;
+      span{
+        font-weight: normal;
+      }
+    }
+    h3{
+      float: left;
+      text-align: center;
+      font-size: 18/18rem;
+      width: 250/18rem;
+      margin-top: 13/18rem;
+      color: #000000;
+      font-weight: bolder;
+    }
+  }
+  .setInfoItems{
+    margin-top: 38/36rem;
+    color:#000000;
+    font-size: 15/18rem;
+    padding-right: 5/18rem;
+    &>div{
+      height: 80/36rem;
+      line-height:80/36rem; ;
+      padding: 6/36rem 26/36rem;
+    }
+    .userName{
+      .country{
+        width: 110/18rem;
+        height: 32/18rem;
+        line-height: 32/18rem;
+        text-align: center;
+        padding-right: 24/36rem;
+        font-size: 15/18rem;
+        float: left;
+      }
+      input{
+        width: 219/18rem;
+        height: 31/18rem;
+        float: right;
+      }
+    }
+    .sex{
+      .country{
+        width: 110/18rem;
+        height: 32/18rem;
+        line-height: 32/18rem;
+        text-align: center;
+        padding-right: 24/36rem;
+        font-size: 15/18rem;
+        float: left;
+      }
+      select{
+        width: 219/18rem;
+        height: 31/18rem;
+        float: right;
+      }
+    }
+    .birth{
+      .country{
+        width: 110/18rem;
+        height: 32/18rem;
+        line-height: 32/18rem;
+        text-align: center;
+        padding-right: 24/36rem;
+        font-size: 15/18rem;
+        float: left;
+      }
+      input{
+        width: 219/18rem;
+        height: 31/18rem;
+        float: right;
+      }
+    }
+    .profession{
+      .country{
+        width: 110/18rem;
+        height: 32/18rem;
+        line-height: 32/18rem;
+        text-align: center;
+        padding-right: 24/36rem;
+        font-size: 15/18rem;
+        float: left;
+      }
+      select{
+        width: 219/18rem;
+        height: 31/18rem;
+        float: right;
+      }
+    }
+    .company{
+      .country{
+        width: 110/18rem;
+        height: 32/18rem;
+        line-height: 32/18rem;
+        text-align: center;
+        padding-right: 24/36rem;
+        font-size: 15/18rem;
+        float: left;
+      }
+      select{
+        width: 219/18rem;
+        height: 31/18rem;
+        float: right;
+      }
+    }
+    .companyName{
+      .country{
+        width: 110/18rem;
+        height: 32/18rem;
+        line-height: 32/18rem;
+        text-align: center;
+        padding-right: 24/36rem;
+        font-size: 15/18rem;
+        float: left;
+      }
+      input{
+        width: 219/18rem;
+        height: 31/18rem;
+        float: right;
+      }
+    }
+    #upData{
+      display: block;
+      width: 300/18rem;
+      margin: 30/18rem auto;
+    }
+  }
+  //设置具体信息结束
+  //设置手机号邮箱开始
+  .setTelHeader{
+    height: 40/18rem;
+    line-height: 40/18rem;
+    padding: 0 38/36rem;
+    vertical-align: middle;
+    a{
+      float: left;
+      height: 40/18rem;
+      font-size: 14/18rem;
+      color: #699;
+      line-height: 40/18rem;
+      font-weight: bolder;
+      span{
+        font-weight: normal;
+      }
+    }
+    h3{
+      float: left;
+      text-align: center;
+      font-size: 16/18rem;
+      width: 250/18rem;
+      margin-top: 13/18rem;
+      color: #000000;
+      font-weight: bolder;
+    }
+  }
+  .setTelItems{
+    margin-top: 38/36rem;
+    color:#000000;
+    font-size: 15/18rem;
+    &>div{
+      height: 80/36rem;
+      line-height:80/36rem; ;
+      padding: 6/36rem 26/36rem;
+    }
+    .Email{
+      .country{
+        width: 110/18rem;
+        height: 32/18rem;
+        line-height: 32/18rem;
+        text-align: center;
+        padding-right: 24/36rem;
+        font-size: 15/18rem;
+        float: left;
+      }
+      input{
+        width: 219/18rem;
+        height: 31/18rem;
+        float: right;
+      }
+    }
+    .phone{
+      .country{
+        width: 110/18rem;
+        height: 32/18rem;
+        line-height: 32/18rem;
+        text-align: center;
+        padding-right: 24/36rem;
+        font-size: 15/18rem;
+        float: left;
+      }
+      input{
+        width: 219/18rem;
+        height: 31/18rem;
+        float: right;
+      }
+    }
+    #upDataTel{
+      display: block;
+      width: 300/18rem;
+      margin: 30/18rem auto;
+    }
+  }
+  //设置手机号邮箱结束
+  //更改密码页面开始
+  .setPassHeader{
+    height: 40/18rem;
+    line-height: 40/18rem;
+    padding: 0 38/36rem;
+    vertical-align: middle;
+    a{
+      float: left;
+      height: 40/18rem;
+      font-size: 14/18rem;
+      color: #699;
+      line-height: 40/18rem;
+      font-weight: bolder;
+      span{
+        font-weight: normal;
+      }
+    }
+    h3{
+      float: left;
+      text-align: center;
+      font-size: 16/18rem;
+      width: 250/18rem;
+      margin-top: 13/18rem;
+      color: #000000;
+      font-weight: bolder;
+    }
+  }
+  .setPassItems{
+    margin-top: 38/36rem;
+    color:#000000;
+    font-size: 15/18rem;
+    &>div{
+      height: 80/36rem;
+      line-height:80/36rem; ;
+      padding: 6/36rem 26/36rem;
+    }
+    .beforePassword{
+      .country{
+        width: 110/18rem;
+        height: 32/18rem;
+        line-height: 32/18rem;
+        text-align: center;
+        padding-right: 24/36rem;
+        font-size: 15/18rem;
+        float: left;
+      }
+      input{
+        width: 219/18rem;
+        height: 31/18rem;
+        float: right;
+      }
+    }
+    .afterPassword{
+      .country{
+        width: 110/18rem;
+        height: 32/18rem;
+        line-height: 32/18rem;
+        text-align: center;
+        padding-right: 24/36rem;
+        font-size: 15/18rem;
+        float: left;
+      }
+      input{
+        width: 219/18rem;
+        height: 31/18rem;
+        float: right;
+      }
+    }
+    .rePassword{
+      .country{
+        width: 110/18rem;
+        height: 32/18rem;
+        line-height: 32/18rem;
+        text-align: center;
+        padding-right: 24/36rem;
+        font-size: 15/18rem;
+        float: left;
+      }
+      input{
+        width: 219/18rem;
+        height: 31/18rem;
+        float: right;
+      }
+    }
+    #upDataPass{
+      display: block;
+      width: 300/18rem;
+      margin: 30/18rem auto;
+    }
+  }
+  //更改密码页面结束
+  //case页面开始
+  .caseNav{
+    height: 40/18rem;
+    display: flex;
+    background-color: #555555;
+    div{
+      font-size: 14/18rem;
+      color: #ffffff;
+      height: 40/18rem;
+      line-height: 40/18rem;
+      flex: 1;
+      text-align: center;
+      span{
+        font-size: 20/18rem;
+        line-height: 30/18rem;
+      }
+    }
+  }
+  .newCase{
+    z-index: 998;
+    float: right;
+    div{
+      height: 46/18rem;
+      width: 184/18rem;
+      background-color: #ffffff;
+      border: 1px solid #bbbbbb;
+      font-size: 14/18rem;
+      line-height: 46/18rem;
+      text-align: center;
+      a{
+        color: #101010;
+      }
+    }
+  }
+  .caseItem{
+    padding: 20/18rem 12/18rem;
+    div{
+      width: 335/18rem;
+      margin: 0 auto;
+      height: 71/18rem;
+      line-height: 71/18rem;
+      background-color: #fff;
+      border-bottom: 3/18rem solid #bbbbbb;
+      border-right: 3/18rem solid #bbbbbb;
+      box-shadow:  2/18rem 2/18rem 5/18rem gray;
+      margin-bottom: 7/18rem;
+      a{
+        padding: 0 12/18rem;
+        height: 71/18rem;
+        font-size: 20/18rem;
+        color: #101010;
+
+      }
+    }
+  }
+  //case 页面结束
+  //new case 页面开始
+  .newCaseItem{
+    padding: 12/18rem;
+    .caseInfo{
+      height: 239/18rem;
+      width: 330/18rem;
+      margin: 0 auto;
+      background-color: #fff;
+      border-bottom: 3/18rem solid #bbbbbb;
+      border-right: 3/18rem solid #bbbbbb;
+      box-shadow:  2/18rem 2/18rem 5/18rem gray;
+      padding: 20/18rem;
+      padding-top: 0;
+      table{
+        tr{
+          height: 30/18rem;
+          td{
+            width: 80/18rem;
+            padding: 10/18rem 0;
+            height: 30/18rem;
+            font-size: 14/18rem;
+            span{
+              color: red;
+            }
+        }
+          td:last-child{
+            height: 30/18rem;
+            width: 220/18rem;
+            select{
+              width: 200/18rem;
+              height: 30/18rem;
+              font-size: 14/18rem;
+              float: right;
+            }
+            textarea{
+              width: 200/18rem;
+              height: 68/18rem;
+              font-size: 14/18rem;
+              float: right;
+            }
+            input{
+              width: 180/18rem;
+              height: 30/18rem;
+              font-size: 14/18rem;
+              float: right;
+            }
+            span{
+              float: right;
+              color: #bbbbbb;
+              font-size: 20/18rem;
+              line-height: 30/18rem;
+              margin-left: 2/18rem;
+            }
+          }
+
+        }
+      }
+    }
+    .newConsignor{
+      height: 33/18rem;
+      background-color: #6DBDBD;
+      font-size: 18/18rem;
+      line-height: 33/18rem;
+      margin-top: 7/18rem;
+      border-radius: 5/18rem;
+      color: #ffffff;
+      padding: 0 10/18rem;
+    }
+    .consignor{
+      height: 310/18rem;
+      margin-top: 7/18rem;
+    }
+    .newOppo{
+      height: 33/18rem;
+      background-color: #6DBDBD;
+      font-size: 18/18rem;
+      line-height: 33/18rem;
+      margin-top: 7/18rem;
+      border-radius: 5/18rem;
+      color: #ffffff;
+      padding: 0 10/18rem;
+    }
+    .opposite{
+      margin-top: 7/18rem;
+      height: 205/18rem;
+    }
+    .newCourt{
+      height: 33/18rem;
+      background-color: #6DBDBD;
+      font-size: 18/18rem;
+      line-height: 33/18rem;
+      margin-top: 7/18rem;
+      border-radius: 5/18rem;
+      color: #ffffff;
+      padding: 0 10/18rem;
+    }
+    .court{
+      margin-top: 7/18rem;
+      height: 205/18rem;
+    }
+    .newJudge{
+      height: 33/18rem;
+      background-color: #6DBDBD;
+      font-size: 18/18rem;
+      line-height: 33/18rem;
+      margin-top: 7/18rem;
+      border-radius: 5/18rem;
+      color: #ffffff;
+      padding: 0 10/18rem;
+    }
+    .judge{
+      margin-top: 7/18rem;
+      height: 150/18rem;
+    }
+    .newLawyer{
+      height: 33/18rem;
+      background-color: #6DBDBD;
+      font-size: 18/18rem;
+      line-height: 33/18rem;
+      margin-top: 7/18rem;
+      border-radius: 5/18rem;
+      color: #ffffff;
+      padding: 0 10/18rem;
+    }
+    .lawyer{
+      margin-top: 7/18rem;
+      height: 255/18rem;
+      margin-bottom: 30/18rem;
+    }
+    .set{
+      display: block;
+      width: 16rem;
+      margin: 0 auto;
+      margin-bottom: 100/18rem;
+      a{
+        color: #ffffff;
+      }
+    }
+  }
+  //new case 页面结束
+  //流程页面开始
+  .listItem{
+    padding: 12/18rem;
+    h3{
+      font-size: 20/18rem;
+      font-weight: bold;
+    }
+    form{
+      &>ul{
+        margin-top: 30/18rem;
+        padding-left: 35/18rem;
+        &>li{
+          display: block;
+          box-sizing: border-box;
+          height: 59/18rem;
+          margin-bottom: 29/18rem;
+          background-color: #fff;
+          line-height: 59/18rem;
+          font-size: 20/18rem;
+          padding: 5/18rem 5/18rem 5/18rem 10/18rem ;
+          position: relative;
+          input{
+            border: 0 ;
+            background-color: transparent;
+            opacity: 1;
+          }
+          &::before{
+            content: "";
+            position: absolute;
+            top: 1.5625rem;
+            left: -1.5625rem;
+            width: 8/18rem;
+            height:8/18rem;
+            border-radius: 50%;
+            background-color: #101010;
+          }
+          &::after{
+            content: "";
+            position: absolute;
+            top: 2.0096rem;
+            left: -1.3375rem;
+            border-right: 1px solid #000000;
+            height: 73/16rem;
+          }
+          .listTime{
+            font-size: 14/18rem;
+            height: 25/18rem;
+            line-height: 25/18rem;
+          }
+          .listAction{
+            font-size: 14/18rem;
+            height: 20/18rem;
+            line-height: 20/18rem;
+            color: #228122;
+          }
+          .hide{
+            display:  none;
+          }
+          .action{
+            ul{
+              height: 59/18rem;
+              box-sizing: border-box;
+              position: absolute;
+              right: 0;
+              top: -2.8rem;
+              width: 150/18rem;
+              float: right;
+              display: flex;
+              padding: 0.7rem;
+              li{
+                text-align: center;
+                display: block;
+                flex: 1;
+                height: 38/18rem;
+                line-height: 38/18rem;
+                list-style: none;
+                float: left;
+                font-size: 16/18rem;
+                border-right: 1px solid #bbbbbb;
+                &:last-child{
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+        li:last-child{
+          &::after{
+            content: "";
+            position: absolute;
+            top: 2.0096rem;
+            left: -1.3375rem;
+            border:none;
+            height: 0;
+          }
+        }
+      }
+
+    }
+    .edit{
+      position: fixed;
+      top: 10rem;
+      left: 2rem;
+      background-color: #f60;
+      width: 16rem;
+      height: 14rem;
+
+    }
+    .reset{
+      margin-left: 120/18rem;
+      margin-bottom: 80/18rem;
+    }
+    .next{
+      margin-bottom: 80/18rem;
+      float: right;
+      a{
+        color: #000000;
+      }
+    }
+  }
+  //流程页面结束
+  //权限管理页面开始
+  .Author{
+    padding: 1rem;
+    position: relative;
+    .searchBar{
+      input{
+        display: block;
+        padding: 0 1.8rem;
+        border-radius: 10/18rem;
+      }
+      span{
+        position: absolute;
+        top: 1.4rem;
+        left: 1.4rem;
+        color: darkgray;
+        font-size: 20/18rem;
+      }
+    }
+    .alwaysFriend{
+      margin-top: 30/18rem;
+      h4{
+        font-size: 16/18rem;
+        font-weight: bolder;
+      }
+      .alwaysFriendItem{
+        position: relative;
+        margin-top: 1rem;
+        list-style: none;
+        display: block;
+        height: 52*4/18rem;
+        overflow: scroll;
+        li{
+          border-radius: 5/18rem;
+          height: 47/18rem;
+          margin-bottom: 5/18rem;
+          border: 1px solid #bbbbbb;
+          background-color: #ffffff;
+          padding-left: 1rem;
+          input{
+            margin: 0;
+            padding: 0;
+            height: 47/18rem;
+            line-height: 47/18rem;
+          }
+          .alwaysFriendName{
+            float: right;
+            display: block;
+            width: 13rem;
+            height: 47/18rem;
+            line-height: 47/18rem;
+            text-align: left;
+            font-size: 14/18rem;
+          }
+        }
+      }
+
+    }
+    .otherFriend{
+      position: relative;
+      border-top: 3/18rem solid #bbbbbb;
+      padding-top: 20/18rem;
+      width: 18rem;
+      height: 250/18rem;
+      background-color: #f2f2f2;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -ms-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s;
+      h4{
+        font-size: 16/18rem;
+        font-weight: bolder;
+      }
+      .down{
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 8.5rem;
+      }
+      .up{
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 8.5rem;
+        display: none;
+      }
+      .otherFriendItem{
+        position: relative;
+        margin-top: 1rem;
+        list-style: none;
+        display: block;
+        height: 51*3/18rem;
+        overflow: scroll;
+        margin-bottom: 4rem;
+
+        li{
+          border-radius: 5/18rem;
+          height: 47/18rem;
+          margin-bottom: 5/18rem;
+          border: 1px solid #bbbbbb;
+          background-color: #ffffff;
+          padding-left: 1rem;
+          input{
+            margin: 0;
+            padding: 0;
+            height: 47/18rem;
+            line-height: 47/18rem;
+          }
+          .otherFriendName{
+            float: right;
+            display: block;
+            width: 13rem;
+            height: 47/18rem;
+            line-height: 47/18rem;
+            text-align: left;
+            font-size: 14/18rem;
+          }
+        }
+      }
+    }
+    .allFriend{
+      position: relative;
+      padding-top: 20/18rem;
+      width: 18rem;
+      height: 250/18rem;
+      background-color: #f2f2f2;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -ms-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s;
+      h4{
+        font-size: 16/18rem;
+        font-weight: bolder;
+      }
+      .down{
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 8.5rem;
+      }
+      .up{
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 8.5rem;
+        display: none;
+      }
+      .allFriendItem{
+        position: relative;
+        margin-top: 1rem;
+        list-style: none;
+        display: block;
+        margin-bottom: 4rem;
+
+        li{
+          border-radius: 5/18rem;
+          height: 47/18rem;
+          margin-bottom: 5/18rem;
+          border: 1px solid #bbbbbb;
+          background-color: #ffffff;
+          padding-left: 1rem;
+          input{
+            margin: 0;
+            padding: 0;
+            height: 47/18rem;
+            line-height: 47/18rem;
+          }
+          .allFriendName{
+            float: right;
+            display: block;
+            width: 13rem;
+            height: 47/18rem;
+            line-height: 47/18rem;
+            text-align: left;
+            font-size: 14/18rem;
+          }
+        }
+      }
+    }
+
+  }
+  //权限管理页面结束
+
+  //案件主页开始
+  .timeHeader{
+    padding: 1rem;
+    position: relative;
+    .openTime{
+      background-color: #fff;
+      height: 38/18rem;
+      padding: 0 13/18rem;
+      margin-bottom: 10/18rem;
+      font-size: 14/18rem;
+      text-align: left;
+      border-radius: 5/18rem;
+      div:first-child{
+        float: left;
+        height: 38/18rem;
+        line-height: 38/18rem;
+      };
+      div:last-child{
+        float: right;
+        height: 38/18rem;
+        line-height: 38/18rem;
+        margin-right: 2rem;
+        width: 10rem;
+      }
+
+    }
+    .proofTime{
+      background-color: #fff;
+      height: 38/18rem;
+      padding: 0 13/18rem;
+      margin-bottom: 10/18rem;
+      font-size: 14/18rem;
+      text-align: left;
+      border-radius: 5/18rem;
+      div:first-child{
+        float: left;
+        height: 38/18rem;
+        line-height: 38/18rem;
+      };
+      div:last-child{
+        float: right;
+        height: 38/18rem;
+        line-height: 38/18rem;
+        margin-right: 2rem;
+        width: 10rem;
+      }
+
+    }
+  }
+  #mainItem{
+    padding: 0 1rem 1rem 1rem;
+    position: relative;
+    h4{
+      font-size: 16/18rem;
+      font-weight: bolder;
+    }
+    ul{
+      margin-top: 30/18rem;
+      padding-left: 35/18rem;
+      margin-bottom: 5rem;
+      &>li{
+        display: block;
+        box-sizing: border-box;
+        height: 50/18rem;
+        margin-bottom: 29/18rem;
+        background-color: #fff;
+        line-height: 50/18rem;
+        font-size: 20/18rem;
+        padding: 5/18rem 5/18rem 5/18rem 10/18rem ;
+        border-radius: 5/18rem;
+        position: relative;
+        input{
+          border: 0 ;
+          background-color: transparent;
+          opacity: 1;
+          font-size:0.65rem;
+          width:167/18rem;
+        }
+        .listTime{
+          font-size: 14/18rem;
+          height: 18/18rem;
+          line-height: 18/18rem;
+        }
+        .listAction{
+          font-size: 14/18rem;
+          height: 22/18rem;
+          line-height: 22/18rem;
+          color: #228122;
+        }
+        .todo{
+          ul{
+            position: absolute;
+            top: 0;
+            right: 0;
+            float: right;
+            margin: 0;
+            padding: 0;
+            padding-right: 0.8rem;
+            list-style: none;
+            li{
+              height: 1rem;
+              float: left;
+              font-size: 14/18rem;
+              color: #669999;
+              &:after{
+                height: 0;
+              };
+              &:before{
+                height: 0;
+              }
+            }
+          }
+        }
+        &::before{
+          content: "";
+          position: absolute;
+          top: 1.1625rem;
+          left: -1.5625rem;
+          width: 8/18rem;
+          height:8/18rem;
+          border-radius: 50%;
+          background-color: #101010;
+        }
+        &::after{
+          content: "";
+          position: absolute;
+          top: 1.2096rem;
+          left: -1.37rem;
+          border-right: 1px solid #000000;
+          height: 4.46rem;
+        }
+      }
+      li:last-child::after{
+        height: 0;
+      }
+    }
+  }
+  //案件主页结束
+  //材料页面开始
+  .materialHeader{
+    height: 40/18rem;
+    line-height: 40/18rem;
+    padding: 0 38/36rem;
+    vertical-align: middle;
+    background: -webkit-linear-gradient(top, #e7e7e7 0%,#ffffff 100%);
+    border-bottom: 1px solid #bbbbbb;
+    a{
+      float: left;
+      height: 40/18rem;
+      font-size: 14/18rem;
+      color: #699;
+      line-height: 40/18rem;
+      font-weight: bolder;
+      span{
+        font-weight: normal;
+        float:left;
+      }
+    }
+    span{
+      font-weight: normal;
+      font-size: 1rem;
+      margin-top:0.4rem;
+      float:right;
+    }
+    h3{
+      float: left;
+      text-align: center;
+      font-size: 18/18rem;
+      width: 200/18rem;
+      margin-top: 13/18rem;
+      color: #000000;
+      font-weight: bolder;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+  }
+  .newMaterial{
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+    div{
+      height: 46/18rem;
+      width: 140/18rem;
+      background-color: #ffffff;
+      border: 1px solid #bbbbbb;
+      font-size: 14/18rem;
+      line-height: 46/18rem;
+      text-align: center;
+      a{
+        color: #101010;
+
+      }
+    }
+  }
+  #materialItem{
+    padding: 1rem;
+    z-index: 999;
+    ul{
+      margin-bottom: 5rem;
+      list-style: none;
+      li{
+        height: 63/18rem;
+        line-height: 63/18rem;
+        font-size: 20/18rem;
+        margin-bottom: 1rem;
+        border-radius: 5/18rem;
+        background-color: #fff;
+        padding: 0 1.5rem;
+        position: relative;
+        box-shadow:  2/18rem 2/18rem 5/18rem gray;
+        span{
+          font-size: 26/18rem;
+          color: #669999;
+          margin-right: 1rem;
+        }
+        .lastTime{
+          font-size: 12/18rem;
+          opacity: 0.5;
+          position: absolute;
+          bottom: 0;
+          right: 0.5rem;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+  #materialItem1{
+    padding: 1rem;
+    z-index: 999;
+    ul{
+      margin-bottom: 5rem;
+      list-style: none;
+      li{
+        height: 4.7rem;
+        
+        font-size: 20/18rem;
+        margin-bottom: 1rem;
+        border-radius: 5/18rem;
+        background-color: #fff;
+        padding: 0 1.5rem;
+        position: relative;
+        box-shadow:  2/18rem 2/18rem 5/18rem gray;
+        span{
+          font-size: 26/18rem;
+          color: red;
+          margin-right: 1rem;
+        }
+        .lastTime{
+          font-size: 12/18rem;
+          opacity: 0.5;
+          position: absolute;
+          bottom: 0;
+          right: 0.5rem;
+          line-height: 1rem;
+        }
+        strong{
+        line-height:4.7rem;}
+      }
+    }
+  }
+
+  //材料页面结束
+
+  //上传页面开始
+  #materialUpload{
+    padding: 1rem;
+    line-height: 35/18rem;
+    margin-bottom: 5rem;
+    h3{
+      font-size: 14/18rem;
+      margin-top: 1rem;
+    }
+    .uploadPic{
+      margin-top: 1.5rem;
+      ul{
+        list-style: none;
+        li{
+          float: left;
+          width: 100/18rem;
+          height: 100/18rem;
+          line-height: 100/18rem;
+          font-size: 40/18rem;
+          border: 2px solid #bbbbbb;
+          text-align: center;
+          margin-right: 0.4rem;
+        }
+      }
+
+    }
+    .uploadProject{
+      input{
+        margin-top: 1rem;
+        overflow: hidden;
+        line-height: 1rem;
+        color: transparent;
+      }
+      ul{
+        list-style: none;
+      }
+    }
+    .selectType{
+      margin-top: 2.85rem;
+      margin-bottom: 5rem;
+    }
+    #title{
+      height: 35/18rem;
+    }
+  }
+
+  //上传页面结束
+
+  //民事诉讼页面开始
+  .minshisusongItem{
+    padding: 1rem;
+    ul{
+      margin-bottom: 5rem;
+      li{
+        height: 70/18rem;
+        border-radius:5/18rem;
+        border:1px solid #bbb;
+        line-height: 60/18rem;
+        font-size: 20/18rem;
+        margin-bottom: 17/18rem;
+        background-color: #fff;
+        list-style: none;
+        padding: 0 24/18rem ;
+        overflow: hidden;
+        box-shadow:2/18rem 2/18rem 5/18rem gray;
+        position:relative;
+        a{
+          color: #000000;
+        }
+        .author1{
+        font-size:14/18rem;
+        position:absolute;
+        top:0;
+        right:1rem;
+        line-height:3.2rem;
+        opacity:0.6;
+        }
+        .crateTime{
+        font-size:12/18rem;
+        position:absolute;
+        bottom 	:0;
+        line-height:2rem;	
+        right:1rem;
+        opacity:0.6	
+        }
+      }
+    }
+  }
+  //民事诉讼页面结束
+  //材料详情开始
+  .materialDetail{
+    padding: 1rem;
+    margin-bottom: 5rem;
+    h4{
+      text-align: center;
+      font-size: 16/18rem;
+    }
+    p{
+      text-indent: 2em;
+      margin-top: 1rem;
+    }
+    #imgGroup{
+      list-style: none;
+      clear: both;
+      margin-top: 3rem;
+      li{
+        float: left;
+        width: 5.55rem;
+        box-sizing: border-box;
+        margin-right: 0.4rem;
+        img{
+          width: 5.55rem;
+          height: 5.55rem;
+        }
+      }
+    }
+    .projectGroup{
+      margin-top: 1rem;
+    }
+  }
+  #shenpiBox{
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    background-color: #ffffff;
+    border: 2px solid #eeeeee;
+    width: 18rem;
+    height: 14rem;
+    padding: 1rem;
+    box-shadow:  2/18rem 2/18rem 5/18rem gray;
+    textarea{
+      margin-top: 1rem;
+      height: 6rem;
+      margin-bottom: 2rem;
+    }
+    button{
+      float: right;
+      width: 3rem;
+      margin-right: 1rem;
+
+    }
+  }
+  #xiangqingBox{
+    overflow: scroll;
+    h4{
+      text-align: center;
+      color: #699;
+      margin-top: 0.5rem;
+    }
+    ul{
+      list-style: none;
+      text-align: center;
+      li{
+        margin-top: 0.5rem;
+        span{
+          color: red;
+        }
+
+      }
+    }
+  }
+  //材料详情结束
+
+  //任务页面开始
+  .misstion{
+    padding: 1rem;
+    position: relative;
+    .alwaysFriend{
+      .alwaysFriendItem{
+        position: relative;
+        list-style: none;
+        display: block;
+        height: 52*4/18rem;
+        overflow: scroll;
+        li{
+          position: relative;
+          border-radius: 5/18rem;
+          height: 70/18rem;
+          margin-bottom: 5/18rem;
+          border: 1px solid #bbbbbb;
+          background-color: #ffffff;
+          padding: 0.5rem 0 0.5rem 1rem;
+          box-shadow:  2/18rem 2/18rem 5/18rem gray;
+          input{
+            margin: 0;
+            padding: 0;
+            height: 52/18rem;
+            line-height: 47/18rem;
+            font-size:18/18rem;
+            overflow: hidden;
+          	text-overflow:ellipsis;
+          }
+          .miss{
+            position: absolute;
+            top: 20/18rem;
+            right: 1rem;
+          }
+        }
+      }
+
+    }
+    .otherFriend{
+      position: relative;
+      border-top: 3/18rem solid #bbbbbb;
+      padding-top: 20/18rem;
+      width: 18rem;
+      height: 250/18rem;
+      background-color: #f2f2f2;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -ms-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s;
+      .down{
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 8.5rem;
+      }
+      .up{
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 8.5rem;
+        display: none;
+      }
+      .otherFriendItem{
+        position: relative;
+        margin-top: 1rem;
+        list-style: none;
+        display: block;
+        height: 70*3/18rem;
+        overflow: scroll;
+        margin-bottom: 4rem;
+
+        li{
+          border-radius: 5/18rem;
+          height: 70/18rem;
+          margin-bottom: 5/18rem;
+          border: 1px solid #bbbbbb;
+          background-color: #ffffff;
+          padding:  0.5rem;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          box-shadow:  2/18rem 2/18rem 5/18rem gray;
+         
+          a{
+            color: #000000;
+            .friendTips{
+              background-color: #fff;
+              padding: 0 13/18rem;
+              margin-bottom: 10/18rem;
+              font-size: 14/18rem;
+              text-align: left;
+              border-radius: 5/18rem;
+              overflow: hidden;
+              .tipsTitle{
+                color: red;
+              }
+
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+  //任务页面结束
+  //loading开始
+  @-webkit-keyframes rotate-animation {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-animation {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes move-animation {
+    0% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+    25% {
+      -webkit-transform: translate(-64px, 0);
+      transform: translate(-64px, 0);
+    }
+    75% {
+      -webkit-transform: translate(32px, 0);
+      transform: translate(32px, 0);
+    }
+    100% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+  }
+  @-webkit-keyframes move-animation {
+    0%{
+      -webkit-transform: translate(0,0);
+      transform: translate(0,0);
+    }
+  }
+  @keyframes move-animation {
+    0% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+    25% {
+      -webkit-transform: translate(-64px, 0);
+      transform: translate(-64px, 0);
+    }
+    75% {
+      -webkit-transform: translate(32px, 0);
+      transform: translate(32px, 0);
+    }
+    100% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+  }
+  .circle-loader {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin-left: -32px;
+    margin-top: -32px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform-origin: 16px 16px;
+    transform-origin: 16px 16px;
+    -webkit-animation: rotate-animation 5s infinite;
+    animation: rotate-animation 5s infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  .circle-loader .circle {
+    -webkit-animation: move-animation 2.5s infinite;
+    animation: move-animation 2.5s infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  .circle-loader .circle-line {
+    width: 64px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    -webkit-transform-origin: 4px 4px;
+    transform-origin: 4px 4px;
+  }
+  .circle-loader .circle-line:nth-child(0) {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .circle-loader .circle-line:nth-child(1) {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .circle-loader .circle-line:nth-child(2) {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .circle-loader .circle-line:nth-child(3) {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  .circle-loader .circle-line .circle:nth-child(1) {
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    margin-top: -4px;
+    margin-left: -4px;
+    border-radius: 4px;
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+  }
+  .circle-loader .circle-line .circle:nth-child(2) {
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px;
+    border-radius: 8px;
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+  }
+  .circle-loader .circle-line .circle:nth-child(3) {
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    margin-left: -12px;
+    border-radius: 12px;
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+  .circle-loader .circle-blue {
+    background-color: #1f4e5a;
+  }
+  .circle-loader .circle-red {
+    background-color: #ff5955;
+  }
+  .circle-loader .circle-yellow {
+    background-color: #ffb265;
+  }
+  .circle-loader .circle-green {
+    background-color: #00a691;
+  }
+  //loading结束
+}

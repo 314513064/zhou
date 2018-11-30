@@ -1,0 +1,72 @@
+body,
+h1,
+h2,
+h3,
+h4,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+body .ui-loader-default,
+h1 .ui-loader-default,
+h2 .ui-loader-default,
+h3 .ui-loader-default,
+h4 .ui-loader-default,
+dl .ui-loader-default,
+dt .ui-loader-default,
+dd .ui-loader-default,
+ul .ui-loader-default,
+li .ui-loader-default {
+  display: none;
+}
+body .ui-mobile-viewport,
+h1 .ui-mobile-viewport,
+h2 .ui-mobile-viewport,
+h3 .ui-mobile-viewport,
+h4 .ui-mobile-viewport,
+dl .ui-mobile-viewport,
+dt .ui-mobile-viewport,
+dd .ui-mobile-viewport,
+ul .ui-mobile-viewport,
+li .ui-mobile-viewport {
+  border: none;
+}
+body .ui-page,
+h1 .ui-page,
+h2 .ui-page,
+h3 .ui-page,
+h4 .ui-page,
+dl .ui-page,
+dt .ui-page,
+dd .ui-page,
+ul .ui-page,
+li .ui-page {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+body {
+  background-color: #f2f2f2;
+  font-family: '黑体', sans-serif, Verdana, Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+a:hover {
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+.wrap {
+  width: 20rem;
+  margin: 0 auto;
+}
